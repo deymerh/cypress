@@ -11,6 +11,7 @@
   "author": "Deymer Hernandez",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.5.1"
+    "cypress": "^12.5.1",
+    "cypress-xpath": "^2.0.1"
   }
 }
