@@ -2,7 +2,8 @@
 describe('LocalStorage', () => { 
 
   beforeEach(()=>{
-    cy.visit('https://www.todo-cypress-iota.vercel.app').then(()=>{
+    cy.session('Sesion todo',() => {
+      cy.visit('https://www.todo-cypress-iota.vercel.app').then(()=>{
       localStorage.setItem('react_todo_ids', JSON.stringify(['Titulo de prueba']));
       localStorage.setItem('Titulo de prueba', JSON.stringify({
         title: 'Titulo de prueba',
@@ -11,6 +12,8 @@ describe('LocalStorage', () => {
         description: 'Descripcion de una prueba'
       }));
     });
+    });
+    cy.visit('https://www.todo-cypress-iota.vercel.app')
   })
   it('Crear una tarea', ()=>{
     
