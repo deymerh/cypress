@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress": "npx cypress open"
+    "test": "npx cypress open",
+    "variable:entorno": "cypress open --env VARIABLE_DE_ENTORNO=valor"
   },
   "keywords": [],
   "author": "Deymer Hernandez",
@@ -13,5 +13,8 @@
   "dependencies": {
     "cypress": "^12.5.1",
     "cypress-xpath": "^2.0.1"
+  },
+  "devDependencies": {
+    "cypress-image-snapshot": "^4.0.1"
   }
 }
